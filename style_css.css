@@ -1,111 +1,18 @@
-/* css/style.css */
-
 body {
-  margin: 0;
+  background: #121212;
+  color: #e0e0e0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle, #1e1e2f, #0d0d15);
-  color: #f0f0f0;
+  margin: 1em;
 }
-
-.container,
-.results-header {
-  max-width: 860px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1 {
-  text-align: center;
-  color: #e0e0ff;
-}
-
-form {
-  display: grid;
-  gap: 1rem;
-  background-color: #222;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-input,
-select,
-button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: none;
-}
-
-input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
-
-button {
-  background: #3f51b5;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #5c6bc0;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.image-card {
-  background-color: #2a2a3a;
-  border-radius: 10px;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 0 10px #000;
-}
-
-.image-card img {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-.image-card .meta {
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.actions button {
-  flex: 1;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
-  background-color: #444;
-}
-
-.actions button:hover {
-  background-color: #666;
-}
-
-#stopBtn,
-#clearBtn {
-  margin: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  background-color: #b71c1c;
-  color: white;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-#stopBtn:hover,
-#clearBtn:hover {
-  background-color: #d32f2f;
-}
+h1, h2, h3 { color: #fff; }
+form label { display: inline-block; margin: 0.5em; }
+input, select { background: #222; color: #ddd; border: 1px solid #444; padding: 0.3em; }
+button { background: #444; color: #fff; border: none; padding: 0.5em 1em; cursor: pointer; }
+button:hover { background: #666; }
+#results { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1em; }
+.result-card { background: #1e1e1e; padding: 0.5em; border-radius: 4px; }
+.result-card img { max-width: 100%; height: auto; display: block; }
+.card-buttons button { margin: 0.2em; }
+.feed-container { display: flex; gap: 1em; }
+.feed { background: #1e1e1e; padding: 0.5em; height: 300px; overflow-y: auto; }
+.feed div { margin-bottom: 0.5em; }
