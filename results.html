@@ -1,0 +1,32 @@
+<!-- results.html (optional - only used if user wants separate result window, not needed with current infinite scroll approach) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Search Results</h1>
+  <div id="results"></div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const prompt = urlParams.get('prompt');
+    const model = urlParams.get('model');
+    const count = +urlParams.get('count') || 5;
+
+    function buildImage(seed) {
+      const imgUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=${model}&seed=${seed}`;
+      const div = document.createElement('div');
+      div.className = 'result-card';
+      div.innerHTML = `<img src="${imgUrl}" loading="lazy" /><p>Seed: ${seed}</p>`;
+      document.getElementById('results').appendChild(div);
+    }
+
+    for (let i = 0; i < count; i++) {
+      const seed = Math.floor(Math.random() * 999999);
+      buildImage(seed);
+    }
+  </script>
+</body>
+</html>
