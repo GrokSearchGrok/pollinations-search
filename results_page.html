@@ -1,0 +1,40 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - Pollinations AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="results-header">
+    <h1>🖼️ Generated Results</h1>
+    <button id="stopBtn">Stop Generating</button>
+    <button id="clearBtn">Clear Results</button>
+  </div>
+
+  <div id="resultsGrid" class="grid-container"></div>
+
+  <template id="imageCardTemplate">
+    <div class="image-card">
+      <img class="result-img" loading="lazy" />
+      <div class="meta">
+        <p><strong>Prompt:</strong> <span class="prompt-text"></span></p>
+        <p><strong>Seed:</strong> <span class="seed-text"></span></p>
+        <p><strong>Model:</strong> <span class="model-text"></span></p>
+      </div>
+      <div class="actions">
+        <button class="copy-btn">📋 Copy Info</button>
+        <button class="download-btn">⬇️ Download</button>
+        <button class="retry-btn">♻️ Regenerate</button>
+        <button class="open-btn">🔗 Open</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/utils.js"></script>
+  <script src="js/feed.js"></script>
+  <script src="js/generate.js"></script>
+</body>
+</html>

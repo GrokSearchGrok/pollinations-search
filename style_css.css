@@ -1,0 +1,111 @@
+/* css/style.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #1e1e2f, #0d0d15);
+  color: #f0f0f0;
+}
+
+.container,
+.results-header {
+  max-width: 860px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #e0e0ff;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+input,
+select,
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+button {
+  background: #3f51b5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5c6bc0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.image-card {
+  background-color: #2a2a3a;
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 0 10px #000;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.image-card .meta {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.actions button {
+  flex: 1;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #444;
+}
+
+.actions button:hover {
+  background-color: #666;
+}
+
+#stopBtn,
+#clearBtn {
+  margin: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #b71c1c;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#stopBtn:hover,
+#clearBtn:hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pollinations Search</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Pollinations AI Generator</h1>
+
+    <form id="promptForm">
+      <label>Prompt
+        <input type="text" id="prompt" placeholder="A cat surfing on Saturn..." required />
+      </label>
+
+      <label>Model
+        <select id="model">
+          <option value="flux">Flux</option>
+          <option value="realisticVision">Realistic Vision</option>
+          <option value="gptimage">GPT Image</option>
+        </select>
+      </label>
+
+      <label>Image Size
+        <input type="number" id="width" placeholder="Width (e.g., 512)" />
+        <input type="number" id="height" placeholder="Height (e.g., 512)" />
+      </label>
+
+      <label>Generate Count
+        <input type="number" id="count" min="1" max="50" value="10" />
+      </label>
+
+      <label><input type="checkbox" id="infiniteMode" /> Enable Infinite Mode</label>
+      <label><input type="checkbox" id="nologo" /> Remove Pollinations Logo</label>
+      <label><input type="checkbox" id="privateMode" /> Hide from Public Feed</label>
+
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+
+  <script src="js/generate.js"></script>
+</body>
+</html>
